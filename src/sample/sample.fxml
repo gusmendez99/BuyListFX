@@ -6,40 +6,39 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox prefHeight="153.0" prefWidth="700.0">
-         <children>
-            <Pane prefHeight="190.0" prefWidth="700.0" styleClass="header" stylesheets="@main.css">
-               <children>
-                  <Label layoutX="30.0" layoutY="97.0" text="Mis listas" textFill="WHITE">
-                     <font>
-                        <Font name="Montserrat Bold" size="28.0" />
-                     </font></Label>
-                  <JFXButton fx:id="newButton" contentDisplay="GRAPHIC_ONLY" layoutX="622.0" layoutY="131.0" styleClass="main-button" stylesheets="@main.css">
-                     <graphic>
-                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" />
-                     </graphic>
-                  </JFXButton>
-               </children>
-            </Pane>
-         </children>
-      </HBox>
-       <JFXTreeTableView prefHeight="200.0" prefWidth="200.0">
-           <columns>
-               <JFXTreeTableColumn fx:id="firstNameColumn" minWidth="133" prefWidth="133" resizable="false" text="Nombre" />
-               <JFXTreeTableColumn fx:id="lastNameColumn" minWidth="133" resizable="false" text="Fecha" />
-               <JFXTreeTableColumn fx:id="ageColumn" minWidth="133" resizable="false" text="Pendientes" />
-               <JFXTreeTableColumn fx:id="estimateColumn" minWidth="133" resizable="false" text="Estimado" />
-           </columns>
-         <VBox.margin>
-            <Insets top="35.0" />
-         </VBox.margin>
-       </JFXTreeTableView>
-   </children>
-</VBox>
+<AnchorPane prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+        <Pane prefHeight="123.0" prefWidth="700.0" styleClass="header" stylesheets="@main.css" />
+   <AnchorPane layoutX="73.0" layoutY="58.0" prefHeight="406.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
+      <children>
+                <Label text="Mis listas">
+                    <font>
+                        <Font name="Montserrat Bold" size="24.0" />
+                    </font>
+            <padding>
+               <Insets left="20.0" top="20.0" />
+            </padding>
+         </Label>
+            <JFXTreeTableView fx:id="buyListTable" layoutX="12.0" layoutY="78.0" prefHeight="307.0" prefWidth="518.0">
+                <columns>
+                    <JFXTreeTableColumn fx:id="nameColumn" minWidth="133" prefWidth="133" resizable="false" text="Nombre" />
+                    <JFXTreeTableColumn fx:id="dateColumn" minWidth="133" resizable="false" text="Fecha" />
+                    <JFXTreeTableColumn fx:id="pendingColumn" minWidth="100" resizable="false" text="Pendientes" />
+                    <JFXTreeTableColumn fx:id="estimateColumn" minWidth="100" resizable="false" text="Estimado" />
+                </columns>
+            </JFXTreeTableView>
+      </children>
+      <effect>
+         <DropShadow blurType="ONE_PASS_BOX" />
+      </effect>
+   </AnchorPane>
+          <JFXButton fx:id="newButton" contentDisplay="GRAPHIC_ONLY" layoutX="622.0" layoutY="99.0" styleClass="main-button" stylesheets="@main.css">
+              <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
+              </graphic>
+          </JFXButton>
+</AnchorPane>
