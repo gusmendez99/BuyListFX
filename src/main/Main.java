@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 
 public class Main extends Application {
@@ -18,7 +17,7 @@ public class Main extends Application {
 
         JFXDecorator decorator = new JFXDecorator(primaryStage, root, false, false, false);
         decorator.setCustomMaximize(false);
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Lista de Compras UVG - Gus");
         primaryStage.setScene(new Scene(decorator, 700, 550));
         primaryStage.setResizable(false);
         primaryStage.show();

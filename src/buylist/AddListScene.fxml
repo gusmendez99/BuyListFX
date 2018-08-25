@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="buylist.AddListController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="555.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buylist.AddListController">
+
+    <Pane prefHeight="169.0" prefWidth="700.0" styleClass="header" stylesheets="@../main/main.css" />
+    <JFXToolbar prefHeight="17.0" prefWidth="700.0" styleClass="jfx-tool-bar" stylesheets="@../main/main.css">
+        <leftItems>
+            <JFXButton fx:id="backButton" onAction="#backToMainWindow" contentDisplay="GRAPHIC_ONLY" layoutX="621.0"
+                       layoutY="440.0" styleClass="main-button-toolbar" stylesheets="@../main/main.css">
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="20" styleClass="main-icon" />
+                </graphic>
+            </JFXButton>
+            <Label prefHeight="17.0" prefWidth="640.0">Nueva lista</Label>
+        </leftItems>
+    </JFXToolbar>
+    <AnchorPane layoutX="79.0" layoutY="81.0" prefHeight="357.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
+        <children>
+            <Label text="Nueva lista">
+                <font>
+                    <Font name="Montserrat Bold" size="24.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" top="20.0" />
+                </padding>
+            </Label>
+            <GridPane alignment="CENTER" layoutX="24.0" layoutY="63.0" prefHeight="185.0" prefWidth="495.0">
+            <rowConstraints>
+               <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" />
+               <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="90.0" />
+            </rowConstraints>
+            <columnConstraints>
+               <ColumnConstraints minWidth="10.0" prefWidth="75.0" />
+               <ColumnConstraints minWidth="10.0" prefWidth="350.0" />
+            </columnConstraints>
+            <children>
+               <Label text="Nombre" GridPane.halignment="LEFT" />
+               <Label text="Descripcion"  GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+               <JFXTextField promptText="Nombre" fx:id="inputName"  GridPane.columnIndex="1" />
+               <JFXTextArea prefHeight="200.0" fx:id="inputDescription" prefWidth="200.0" promptText="Descripcion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children></GridPane>
+         <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="394.0" layoutY="248.0" mnemonicParsing="false" onAction="#addNewBuyList" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="CREAR" />
+        </children>
+        <effect>
+            <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
+        </effect>
+    </AnchorPane>
+    <!---->
 
 </AnchorPane>

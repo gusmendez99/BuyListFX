@@ -16,11 +16,13 @@ import java.util.stream.Collectors;
 public class BuyList extends RecursiveTreeObject<BuyList> {
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     SimpleStringProperty name;
+    SimpleStringProperty description;
     SimpleObjectProperty<String> date;
     private ArrayList<Product> products;
 
 
-    public BuyList(String name){
+    public BuyList(String name, String description){
+        this.description = new SimpleStringProperty(description);
         this.name = new SimpleStringProperty(name);
         this.products = new ArrayList<>();
         this.date = new SimpleObjectProperty<String>(sdf.format(new Date()));
@@ -36,6 +38,14 @@ public class BuyList extends RecursiveTreeObject<BuyList> {
 
     public SimpleStringProperty nameProperty() {
         return name;
+    }
+
+    public String getDescription() {
+        return description.get();
+    }
+
+    public SimpleStringProperty descriptionProperty() {
+        return description;
     }
 
     public SimpleObjectProperty dateProperty() {

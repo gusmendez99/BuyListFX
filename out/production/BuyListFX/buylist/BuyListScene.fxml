@@ -37,14 +37,14 @@
             <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
         </effect>
    </AnchorPane>
-    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" styleClass="main-button" stylesheets="@../main/main.css">
+    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" onAction="#openAddBuyListWindow" styleClass="main-button" stylesheets="@../main/main.css">
         <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
         </graphic>
     </JFXButton>
     <JFXToolbar prefHeight="17.0" prefWidth="700.0" styleClass="jfx-tool-bar" stylesheets="@../main/main.css">
         <leftItems>
-            <Label>Listas de compras</Label>
+            <Label prefHeight="17.0" prefWidth="700.0">Listas de compras</Label>
         </leftItems>
     </JFXToolbar>
 </AnchorPane>
