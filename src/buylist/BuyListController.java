@@ -1,4 +1,4 @@
-package sample;
+package buylist;
 
 import buylist.BuyList;
 import com.jfoenix.controls.JFXTreeTableColumn;
@@ -8,16 +8,21 @@ import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.function.Function;
 
-public class Controller {
+public class BuyListController {
 
     //Properties
     @FXML
@@ -64,7 +69,33 @@ public class Controller {
             }
         });
     }
+    /*
+    public void openNewWindow(ActionEvent event) {
+        Parent root;
+        try {
+            // Cargar la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddListScene.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Nueva lista");
+            stage.setScene(new Scene(root, 450, 450));
 
+            // Manda la persona seleccionada
+            TestSceneController testSceneController = loader.getController();
+            Person selectedPerson = peopleTable.getSelectionModel().getSelectedItem();
+            if (selectedPerson != null) {
+                testSceneController.setName("" + selectedPerson);
+            } else {
+                testSceneController.setName("Mano, no hay nadie seleccionado!");
+            }
 
+            // Muestra la ventana
+            stage.show();
+            // Hide this current window (if this is what you want)
+            // ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
 
 }

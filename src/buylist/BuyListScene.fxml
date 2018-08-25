@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
 <?import com.jfoenix.controls.JFXTreeTableColumn?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -11,10 +12,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-        <Pane prefHeight="123.0" prefWidth="700.0" styleClass="header" stylesheets="@main.css" />
-   <AnchorPane layoutX="73.0" layoutY="58.0" prefHeight="406.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
-      <children>
+<AnchorPane prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buylist.BuyListController">
+    <Pane prefHeight="169.0" prefWidth="700.0" styleClass="header" stylesheets="@../main/main.css" />
+    <AnchorPane layoutX="79.0" layoutY="81.0" prefHeight="357.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
+        <children>
                 <Label text="Mis listas">
                     <font>
                         <Font name="Montserrat Bold" size="24.0" />
@@ -23,7 +24,7 @@
                <Insets left="20.0" top="20.0" />
             </padding>
          </Label>
-            <JFXTreeTableView fx:id="buyListTable" layoutX="12.0" layoutY="78.0" prefHeight="307.0" prefWidth="518.0">
+            <JFXTreeTableView fx:id="buyListTable" layoutX="12.0" layoutY="78.0" prefHeight="258.0" prefWidth="518.0">
                 <columns>
                     <JFXTreeTableColumn fx:id="nameColumn" minWidth="133" prefWidth="133" resizable="false" text="Nombre" />
                     <JFXTreeTableColumn fx:id="dateColumn" minWidth="133" resizable="false" text="Fecha" />
@@ -31,14 +32,19 @@
                     <JFXTreeTableColumn fx:id="estimateColumn" minWidth="100" resizable="false" text="Estimado" />
                 </columns>
             </JFXTreeTableView>
-      </children>
-      <effect>
-         <DropShadow blurType="ONE_PASS_BOX" />
-      </effect>
+        </children>
+        <effect>
+            <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
+        </effect>
    </AnchorPane>
-          <JFXButton fx:id="newButton" contentDisplay="GRAPHIC_ONLY" layoutX="622.0" layoutY="99.0" styleClass="main-button" stylesheets="@main.css">
-              <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
-              </graphic>
-          </JFXButton>
+    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" styleClass="main-button" stylesheets="@../main/main.css">
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
+        </graphic>
+    </JFXButton>
+    <JFXToolbar prefHeight="17.0" prefWidth="700.0" styleClass="jfx-tool-bar" stylesheets="@../main/main.css">
+        <leftItems>
+            <Label prefHeight="17.0" prefWidth="700.0">Listas de compras</Label>
+        </leftItems>
+    </JFXToolbar>
 </AnchorPane>
