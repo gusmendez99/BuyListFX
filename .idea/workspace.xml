@@ -2,18 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/product/AddItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/product/AddItemScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/product/ItemListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/product/ItemListScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/buylist/AddListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BuyListFX/buylist/AddListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/buylist/BuyListScene.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BuyListFX/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BuyListFX/main/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BuyListFX/manager/BuyListManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/buylist/AddListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/AddListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buylist/AddListScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/AddListScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buylist/BuyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/BuyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buylist/BuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/BuyListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buylist/BuyListScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/BuyListScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buylist/BuyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buylist/BuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/ShoppingListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buylist/BuyListScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/BuyListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/BuyListManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/BuyListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/ShoppingListManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/product/ShoppingItem.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,45 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BuyList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+      <file leaf-file-name="ItemListController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/product/ItemListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyListManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/BuyListManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="153">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,55 +90,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuyListController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyListScene.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+      <file leaf-file-name="ItemListScene.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/product/ItemListScene.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddListScene.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/buylist/AddListScene.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddListController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buylist/AddListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="47" column="31" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="295">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -179,6 +109,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sty</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -200,14 +135,20 @@
         <option value="$PROJECT_DIR$/src/controllers/BuyListController.java" />
         <option value="$PROJECT_DIR$/src/buylist/addListScene.fxml" />
         <option value="$PROJECT_DIR$/src/AddListController.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/main.css" />
         <option value="$PROJECT_DIR$/src/buylist/BuyList.java" />
         <option value="$PROJECT_DIR$/src/manager/BuyListManager.java" />
-        <option value="$PROJECT_DIR$/src/buylist/BuyListScene.fxml" />
-        <option value="$PROJECT_DIR$/src/buylist/BuyListController.java" />
-        <option value="$PROJECT_DIR$/src/buylist/AddListController.java" />
         <option value="$PROJECT_DIR$/src/buylist/AddListScene.fxml" />
+        <option value="$PROJECT_DIR$/src/main/main.css" />
+        <option value="$PROJECT_DIR$/src/buylist/BuyListScene.fxml" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/buylist/AddListController.java" />
+        <option value="$PROJECT_DIR$/src/buylist/BuyListController.java" />
+        <option value="$PROJECT_DIR$/src/product/AddProductScene.fxml" />
+        <option value="$PROJECT_DIR$/src/product/ProductListScene.fxml" />
+        <option value="$PROJECT_DIR$/src/product/ProductListController.java" />
+        <option value="$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml" />
+        <option value="$PROJECT_DIR$/src/buylist/ShoppingListController.java" />
+        <option value="$PROJECT_DIR$/src/product/ItemListScene.fxml" />
       </list>
     </option>
   </component>
@@ -219,10 +160,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="14" />
+    <option name="y" value="-21" />
+    <option name="width" value="1374" />
+    <option name="height" value="496" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -457,11 +398,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.329296" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14191419" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21782178" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.39933994" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16048448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16048448" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -472,7 +414,6 @@
       <window_info anchor="right" id="JetGradle" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Changes" order="7" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
@@ -500,16 +441,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="48" column="55" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -524,7 +461,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -538,7 +475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -553,7 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
@@ -563,16 +500,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="48" column="55" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -584,7 +517,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -598,7 +531,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="50" column="93" selection-start-line="50" selection-start-column="93" selection-end-line="50" selection-end-column="93" />
@@ -615,7 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -623,16 +556,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -644,7 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
@@ -658,7 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
@@ -668,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -676,21 +605,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
@@ -704,7 +629,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -712,7 +637,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
@@ -729,14 +654,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
@@ -750,7 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -758,16 +683,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -779,7 +700,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -787,7 +708,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -797,7 +718,7 @@
     <entry file="file://$PROJECT_DIR$/wallpaper.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/product/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/product/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -825,75 +746,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyList.java">
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+        <state relative-caret-position="238">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="72" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/BuyListManager.java">
+    <entry file="file://$PROJECT_DIR$/src/manager/ShoppingListManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="336">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfoenix-8.0.7.jar!/com/jfoenix/controls/JFXSnackbar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/buylist/AddListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/BuyListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/buylist/AddListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="115">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -901,10 +802,68 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/buylist/AddListScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/product/AddItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/product/AddItemScene.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+        <state relative-caret-position="170">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/buylist/ShoppingListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/product/ItemListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/product/ItemListScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -10,7 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import manager.BuyListManager;
+import manager.ShoppingListManager;
 
 import java.io.IOException;
 
@@ -26,14 +26,16 @@ public class AddListController {
         Parent root;
         try {
             // Cargar la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("BuyListScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingListScene.fxml"));
             root = loader.load();
             Stage stage = new Stage();
 
             JFXDecorator decorator = new JFXDecorator(stage, root, false, false, false);
             decorator.setCustomMaximize(false);
             stage.setTitle("Lista de Compras UVG - Gus");
-            stage.setScene(new Scene(decorator, 700, 550));
+            Scene scene = new Scene(decorator, 700, 550);
+            scene.getStylesheets().add(AddListController.class.getResource("../main/main.css").toExternalForm());
+            stage.setScene(scene);
             stage.setResizable(false);
             // Muestra la ventana
             stage.show();
@@ -48,7 +50,7 @@ public class AddListController {
         String name = inputName.getText();
         String description = inputDescription.getText();
 
-        BuyListManager.getInstance().addBuyList(new BuyList(name, description));
+        ShoppingListManager.getInstance().addBuyList(new ShoppingList(name, description));
         backToMainWindow(event);
 
     }

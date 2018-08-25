@@ -1,6 +1,5 @@
 package buylist;
 
-import buylist.BuyList;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.value.ObservableValue;
@@ -13,56 +12,60 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TreeTableColumn;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.util.Callback;
-import manager.BuyListManager;
+import manager.ShoppingListManager;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.function.Function;
 
-public class BuyListController {
+public class ShoppingListController {
 
     //Properties
     @FXML
-    private JFXTreeTableView<BuyList> buyListTable;
+    private AnchorPane anchorPane;
 
     @FXML
-    private JFXTreeTableColumn<BuyList, String> nameColumn;
+    private JFXTreeTableView<ShoppingList> shoppingListTable;
 
     @FXML
-    private JFXTreeTableColumn<BuyList, LocalDate> dateColumn;
+    private JFXTreeTableColumn<ShoppingList, String> nameColumn;
 
     @FXML
-    private JFXTreeTableColumn<BuyList, Integer> pendingColumn;
+    private JFXTreeTableColumn<ShoppingList, LocalDate> dateColumn;
 
     @FXML
-    private JFXTreeTableColumn<BuyList, Double> estimateColumn;
+    private JFXTreeTableColumn<ShoppingList, Integer> pendingColumn;
+
+    @FXML
+    private JFXTreeTableColumn<ShoppingList, Double> estimateColumn;
 
     @FXML
     private JFXButton addButton;
+
+    private ObservableList<ShoppingList> data;
 
     @FXML
     public void initialize() {
 
         DateTimeFormatter myDateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-        ObservableList<BuyList> data = FXCollections.observableArrayList(BuyListManager.getInstance().getBuyLists());
+        this.data = FXCollections.observableArrayList(ShoppingListManager.getInstance().getShoppingLists());
 
-        setupCellValueFactory(nameColumn, BuyList::nameProperty);
-        setupCellValueFactory(dateColumn, BuyList::dateProperty);
+        setupCellValueFactory(nameColumn, ShoppingList::nameProperty);
+        setupCellValueFactory(dateColumn, ShoppingList::dateProperty);
         setupCellValueFactory(pendingColumn, bl -> bl.pendingProductsProperty().asObject());
         setupCellValueFactory(estimateColumn, bl -> bl.estimatePendingProperty().asObject());
 
-        buyListTable.setRoot(new RecursiveTreeItem<>(data, RecursiveTreeObject::getChildren));
-        buyListTable.setShowRoot(false);
+        shoppingListTable.setRoot(new RecursiveTreeItem<>(this.data, RecursiveTreeObject::getChildren));
+        shoppingListTable.setShowRoot(false);
 
     }
 
-    private <T> void setupCellValueFactory(JFXTreeTableColumn<BuyList, T> column, Function<BuyList, ObservableValue<T>> mapper) {
-        column.setCellValueFactory((TreeTableColumn.CellDataFeatures<BuyList, T> param) -> {
+    private <T> void setupCellValueFactory(JFXTreeTableColumn<ShoppingList, T> column, Function<ShoppingList, ObservableValue<T>> mapper) {
+        column.setCellValueFactory((TreeTableColumn.CellDataFeatures<ShoppingList, T> param) -> {
             if (column.validateValue(param)) {
                 return mapper.apply(param.getValue().getValue());
             } else {
@@ -91,6 +94,27 @@ public class BuyListController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void deleteBuyList(){
+        try {
+            ShoppingList shoppingListToDelete = shoppingListTable.getSelectionModel().selectedItemProperty().get().getValue();
+            if (shoppingListToDelete != null) {
+                this.data.remove(shoppingListToDelete);
+                ShoppingListManager.getInstance().deleteBuyList(shoppingListToDelete);
+                JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+                snackbar.show("Lista eliminada exitosamente", 2500);
+                shoppingListTable.getSelectionModel().clearSelection();
+            } else {
+                JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+                snackbar.show("Por favor, selecciona una lista", 2500);
+            }
+        } catch (NullPointerException ex) {
+            JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+            snackbar.show("Por favor, selecciona una lista", 2500);
+        }
+
+
     }
 
 }

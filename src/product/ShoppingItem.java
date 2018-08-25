@@ -5,13 +5,13 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Product {
+public class ShoppingItem {
     SimpleStringProperty name;
     SimpleIntegerProperty quantity;
     SimpleDoubleProperty price;
     SimpleBooleanProperty isComplete;
 
-    public Product(String name, int quantity, double price){
+    public ShoppingItem(String name, int quantity, double price){
         this.name = new SimpleStringProperty(name);
         this.quantity = new SimpleIntegerProperty(quantity);
         this.price = new SimpleDoubleProperty(price);

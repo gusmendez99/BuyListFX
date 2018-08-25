@@ -12,13 +12,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../buylist/BuyListScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../buylist/ShoppingListScene.fxml"));
         //primaryStage.initStyle(StageStyle.UNDECORATED);
 
         JFXDecorator decorator = new JFXDecorator(primaryStage, root, false, false, false);
         decorator.setCustomMaximize(false);
         primaryStage.setTitle("Lista de Compras UVG - Gus");
-        primaryStage.setScene(new Scene(decorator, 700, 550));
+        Scene scene = new Scene(decorator, 700, 550);
+        scene.getStylesheets().add(Main.class.getResource("main.css").toExternalForm());
+        primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
     }

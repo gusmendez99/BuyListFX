@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-import product.Product;
+import product.ShoppingItem;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,18 +13,18 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BuyList extends RecursiveTreeObject<BuyList> {
+public class ShoppingList extends RecursiveTreeObject<ShoppingList> {
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     SimpleStringProperty name;
     SimpleStringProperty description;
     SimpleObjectProperty<String> date;
-    private ArrayList<Product> products;
+    private ArrayList<ShoppingItem> shoppingItems;
 
 
-    public BuyList(String name, String description){
+    public ShoppingList(String name, String description){
         this.description = new SimpleStringProperty(description);
         this.name = new SimpleStringProperty(name);
-        this.products = new ArrayList<>();
+        this.shoppingItems = new ArrayList<>();
         this.date = new SimpleObjectProperty<String>(sdf.format(new Date()));
     }
 
@@ -60,21 +60,21 @@ public class BuyList extends RecursiveTreeObject<BuyList> {
         return new SimpleDoubleProperty(getEstimatePendingTotal());
     }
 
-    public List<Product> getPendingProducts(){
-        return this.products.stream()             // convert list to stream
+    public List<ShoppingItem> getPendingProducts(){
+        return this.shoppingItems.stream()             // convert list to stream
                 .filter(p -> !p.isComplete())     // we dont like not pendings
                 .collect(Collectors.toList());
     }
 
     public double getEstimatePendingTotal(){
-        return this.products.stream()             // convert list to stream
+        return this.shoppingItems.stream()             // convert list to stream
                 .filter(p -> !p.isComplete())
-                .mapToDouble(Product::getPrice)
+                .mapToDouble(ShoppingItem::getPrice)
                 .sum();
     }
 
-    public void addProduct(Product product) {
-        this.products.add(product);
+    public void addProduct(ShoppingItem shoppingItem) {
+        this.shoppingItems.add(shoppingItem);
     }
 
 }
