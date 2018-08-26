@@ -52,7 +52,7 @@ public class AddListController {
         }
     }
 
-    public void addNewBuyList(ActionEvent event){
+    public void addNewShoppingList(ActionEvent event){
         String name = inputName.getText();
         String description = inputDescription.getText();
 
@@ -64,6 +64,8 @@ public class AddListController {
             snackbar.show("Ya existe una lista con el mismo nombre", 2500);
         }
     }
+
+
 
     public void openEditShoppingListWindow(ActionEvent event) {
         Parent root;

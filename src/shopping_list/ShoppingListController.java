@@ -68,7 +68,7 @@ public class ShoppingListController {
                 if(!empty){
                     DecimalFormat df = new DecimalFormat("#.00");
                     String valueStr = df.format(item);
-                    setText("Q" + valueStr);
+                    setText(item == 0.00 ? "Q0.00" : "Q" + valueStr);
                 }
             }
         });

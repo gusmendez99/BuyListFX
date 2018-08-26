@@ -54,7 +54,7 @@
                <JFXTextField promptText="Nombre" fx:id="inputName"  GridPane.columnIndex="1" />
                <JFXTextArea prefHeight="200.0" fx:id="inputDescription" prefWidth="200.0" promptText="Descripcion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children></GridPane>
-         <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="394.0" layoutY="248.0" mnemonicParsing="false" onAction="#addNewBuyList" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="CREAR" />
+         <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="394.0" layoutY="248.0" mnemonicParsing="false" onAction="#addNewShoppingList" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="CREAR" />
         </children>
         <effect>
             <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />

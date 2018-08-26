@@ -82,7 +82,7 @@ public class ShoppingItemController {
                 if(!empty){
                     DecimalFormat df = new DecimalFormat("#.00");
                     String valueStr = df.format(item);
-                    setText("Q" + valueStr);
+                    setText(item == 0.00 ? "Q0.00" : "Q" + valueStr);
                 }
             }
         });
@@ -95,7 +95,7 @@ public class ShoppingItemController {
                 if(!empty){
                     DecimalFormat df = new DecimalFormat("#.00");
                     String valueStr = df.format(item);
-                    setText("Q" + valueStr);
+                    setText(item == 0.00 ? "Q0.00" : "Q" + valueStr);
                 }
             }
         });
@@ -108,10 +108,6 @@ public class ShoppingItemController {
                 setText(empty ? null : item ? "Comprado" : "Pendiente" );
             }
         });
-
-        List<ShoppingItem> items = new ArrayList<>();
-        this.data = FXCollections.observableArrayList(items);
-
     }
 
     public void setInitUI(String listName){
@@ -155,6 +151,33 @@ public class ShoppingItemController {
             scene.getStylesheets().add(ShoppingItemController.class.getResource("../main/main.css").toExternalForm());
             stage.setScene(scene);
             stage.setResizable(false);
+            // Muestra la ventana
+            stage.show();
+            // Hide this current window (if this is what you want)
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openAddShoppingItemWindow(ActionEvent event) {
+        Parent root;
+        try {
+            // Cargar la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddItemScene.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+
+            JFXDecorator decorator = new JFXDecorator(stage, root, false, false, false);
+            decorator.setCustomMaximize(false);
+            stage.setTitle("Lista de Compras UVG - Gus");
+            Scene scene = new Scene(decorator, 700, 550);
+            scene.getStylesheets().add(ShoppingItemController.class.getResource("../main/main.css").toExternalForm());
+            stage.setScene(scene);
+            stage.setResizable(false);
+
+            AddItemController controller = loader.getController();
+            controller.setInitUI(this.currentShoppingListName);
             // Muestra la ventana
             stage.show();
             // Hide this current window (if this is what you want)

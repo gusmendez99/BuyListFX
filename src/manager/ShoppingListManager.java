@@ -52,4 +52,14 @@ public class ShoppingListManager {
     }
 
 
+    public boolean addShoppingItem(String nameList, ShoppingItem item) {
+        for(int x = 0; x < shoppingLists.size(); x++){
+            if(shoppingLists.get(x).getName().equals(nameList)){
+                shoppingLists.get(x).addShoppingItem(item);
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
