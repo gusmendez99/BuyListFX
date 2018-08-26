@@ -2,6 +2,7 @@ package shopping_item;
 
 import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell;
 import com.sun.org.apache.xpath.internal.operations.Bool;
+import javafx.scene.control.Button;
 import javafx.scene.control.TreeTableCell;
 import javafx.util.Callback;
 import shopping_list.ShoppingList;
@@ -24,10 +25,6 @@ import manager.ShoppingListManager;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Function;
 
 public class ShoppingItemController {
@@ -119,7 +116,7 @@ public class ShoppingItemController {
 
         this.listTitleLabel.setText(currentShoppingList.getName());
         this.listDescriptionLabel.setText(currentShoppingList.getDescription());
-        this.grandTotalLabel.setText(grandTotal);
+        this.grandTotalLabel.setText(currentShoppingList.getEstimatePendingTotal() == 0.00 ? "Q0.00" : "Q" + grandTotal);
 
         this.data = FXCollections.observableArrayList(currentShoppingList.getAllShoppingItems());
         shoppingItemTable.setRoot(new RecursiveTreeItem<>(this.data, RecursiveTreeObject::getChildren));
@@ -187,5 +184,28 @@ public class ShoppingItemController {
         }
     }
 
+    public void changeShoppingItemState(ActionEvent event){
+        try {
+            ShoppingItem shoppingItemToUpdate = shoppingItemTable.getSelectionModel().selectedItemProperty().get().getValue();
+            if (shoppingItemToUpdate != null) {
+                boolean isComplete = ((JFXButton)event.getSource()).getText().equals("COMPRADO");
+                ShoppingListManager.getInstance().updateShoppingItemState(currentShoppingListName, shoppingItemToUpdate, isComplete);
+                updateUI();
+            } else {
+                JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+                snackbar.show("Por favor, selecciona un articulo", 2500);
+            }
+        } catch (NullPointerException ex){
+            JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+            snackbar.show("Por favor, selecciona un articulo", 2500);
+        }
+    }
+
+    public void updateUI(){
+        ShoppingList currentShoppingList = ShoppingListManager.getInstance().getShoppingListByName(currentShoppingListName);
+        DecimalFormat df = new DecimalFormat("#.00");
+        String grandTotal = df.format(currentShoppingList.getEstimatePendingTotal());
+        this.grandTotalLabel.setText(currentShoppingList.getEstimatePendingTotal() == 0.00 ? "Q0.00" : "Q" + grandTotal);
+    }
 
 }

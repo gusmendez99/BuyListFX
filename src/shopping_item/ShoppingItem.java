@@ -44,35 +44,19 @@ public class ShoppingItem extends RecursiveTreeObject<ShoppingItem> {
         return this.name.get();
     }
 
-    public void setName(String name){
-        this.name.set(name);
-    }
-
     public int getQuantity(){
         return this.quantity.get();
-    }
-
-    public void setQuantity(int quantity){
-        this.quantity.set(quantity);
     }
 
     public Double getPrice(){
         return this.price.get();
     }
 
-    public void setPrice(Double price){
-        this.price.set(price);
-    }
-
     public boolean isComplete(){
         return this.isComplete.get();
     }
 
-    public void setComplete(){
-        this.isComplete.set(true);
-    }
-
-    public void setIncomplete(){
-        this.isComplete.set(false);
+    public void setState(boolean state) {
+        this.isComplete.set(state);
     }
 }

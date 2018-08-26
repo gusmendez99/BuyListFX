@@ -56,8 +56,8 @@
         <effect>
             <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
         </effect>
-        <JFXButton fx:id="setAsPendingButton" buttonType="RAISED" layoutX="304.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="PENDIENTE" />
-        <JFXButton fx:id="setAsPurchasedButton" buttonType="RAISED" layoutX="412.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="COMPRADO" />
+        <JFXButton onAction="#changeShoppingItemState" buttonType="RAISED" layoutX="304.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="PENDIENTE" />
+        <JFXButton onAction="#changeShoppingItemState" buttonType="RAISED" layoutX="412.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="COMPRADO" />
       <Label layoutX="14.0" layoutY="305.0" prefHeight="17.0" prefWidth="74.0" text="Pendiente:">
          <font>
             <Font name="Montserrat Bold" size="12.0" />

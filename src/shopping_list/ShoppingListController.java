@@ -150,7 +150,7 @@ public class ShoppingListController {
         }
     }
 
-    public void deleteBuyList(){
+    public void deleteShoppingList(){
         try {
             ShoppingList shoppingListToDelete = shoppingListTable.getSelectionModel().selectedItemProperty().get().getValue();
             if (shoppingListToDelete != null) {
@@ -158,6 +158,7 @@ public class ShoppingListController {
                 ShoppingListManager.getInstance().deleteShoppingList(shoppingListToDelete);
                 JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
                 snackbar.show("Lista eliminada exitosamente", 2500);
+                shoppingListTable.refresh();
                 shoppingListTable.getSelectionModel().clearSelection();
             } else {
                 JFXSnackbar snackbar = new JFXSnackbar(anchorPane);

@@ -62,4 +62,17 @@ public class ShoppingListManager {
 
         return false;
     }
+
+    public void updateShoppingItemState(String nameList, ShoppingItem shoppingItemToUpdate, boolean state) {
+        for(int x = 0; x < shoppingLists.size(); x++){
+            if(shoppingLists.get(x).getName().equals(nameList)){
+                for(int y = 0; y < shoppingLists.get(x).getAllShoppingItems().size(); y++){
+                    if(shoppingLists.get(x).getAllShoppingItems().get(y) == shoppingItemToUpdate){
+                        shoppingLists.get(x).getAllShoppingItems().get(y).setState(state);
+                    }
+                }
+            }
+        }
+
+    }
 }
