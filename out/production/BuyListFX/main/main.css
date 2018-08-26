@@ -2,6 +2,10 @@
     -fx-background-color: #F44336;
 }
 
+.header-items {
+    -fx-background-color: #8bc34a;
+}
+
 .main-button {
     -fx-pref-width: 50px;
     -fx-background-color: #546E7A;

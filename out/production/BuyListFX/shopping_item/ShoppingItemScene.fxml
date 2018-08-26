@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopping_item.ShoppingItemController">
+    <Pane prefHeight="169.0" prefWidth="700.0" styleClass="header-items" stylesheets="@../main/main.css" />
+    <JFXToolbar prefHeight="17.0" prefWidth="700.0" styleClass="jfx-tool-bar" stylesheets="@../main/main.css" style="-fx-background-color: #689f38">
+        <leftItems>
+            <JFXButton fx:id="backButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" onAction="#backToMainWindow" styleClass="main-button-toolbar" stylesheets="@../main/main.css">
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="20" styleClass="main-icon" />
+                </graphic>
+            </JFXButton>
+            <Label prefHeight="17.0" prefWidth="640.0">Editar lista</Label>
+        </leftItems>
+    </JFXToolbar>
+    <AnchorPane layoutX="79.0" layoutY="81.0" prefHeight="357.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
+        <children>
+            <Label fx:id="listTitleLabel" text="Title">
+                <font>
+                    <Font name="Montserrat Bold" size="24.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" top="20.0" />
+                </padding>
+            </Label>
+            <Label fx:id="listDescriptionLabel" text="Title" wrapText="false">
+                <font>
+                    <Font name="Montserrat" size="12.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" top="50.0" />
+                </padding>
+            </Label>
+            <JFXTreeTableView fx:id="shoppingItemTable" layoutX="12.0" layoutY="78.0" prefHeight="200.0" prefWidth="518.0">
+                <columns>
+                    <JFXTreeTableColumn fx:id="nameColumn" minWidth="133" prefWidth="133" resizable="false" text="Nombre" />
+                    <JFXTreeTableColumn fx:id="quantityColumn" minWidth="80" resizable="false" text="Cantidad" />
+                    <JFXTreeTableColumn fx:id="unitPriceColumn" minWidth="100" resizable="false" text="Unitario" />
+                    <JFXTreeTableColumn fx:id="totalColumn" minWidth="100" resizable="false" text="Total" />
+                    <JFXTreeTableColumn fx:id="stateColumn" minWidth="100" resizable="false" text="Estado" />
+                </columns>
+            </JFXTreeTableView>
+        </children>
+        <effect>
+            <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
+        </effect>
+        <JFXButton fx:id="setAsPendingButton" buttonType="RAISED" layoutX="304.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="PENDIENTE" />
+        <JFXButton fx:id="setAsPurchasedButton" buttonType="RAISED" layoutX="412.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="COMPRADO" />
+      <Label layoutX="14.0" layoutY="305.0" prefHeight="17.0" prefWidth="74.0" text="Pendiente:">
+         <font>
+            <Font name="Montserrat Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="grandTotalLabel" layoutX="99.0" layoutY="305.0" prefHeight="17.0" prefWidth="68.0" text="Q10.00">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font></Label>
+    </AnchorPane>
+    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" styleClass="main-button" stylesheets="@../main/main.css">
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
+        </graphic>
+    </JFXButton>
+
+</AnchorPane>

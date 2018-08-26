@@ -12,16 +12,18 @@
 <?import com.jfoenix.controls.JFXTreeTableColumn?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
-<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buylist.ShoppingListController">
+<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="700.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="shopping_list.ShoppingListController">
     <Pane prefHeight="169.0" prefWidth="700.0" styleClass="header" stylesheets="@../main/main.css" />
     <JFXToolbar prefHeight="17.0" prefWidth="700.0" styleClass="jfx-tool-bar" stylesheets="@../main/main.css">
         <leftItems>
-            <Label prefHeight="17.0" prefWidth="700.0">Mi lista</Label>
+            <Label prefHeight="17.0" prefWidth="700.0">Listas de compras</Label>
         </leftItems>
     </JFXToolbar>
     <AnchorPane layoutX="79.0" layoutY="81.0" prefHeight="357.0" prefWidth="542.0" style="-fx-background-color: #ffffff;">
         <children>
-            <Label fx:id="listTitle" text="">
+            <Label text="Mis listas">
                 <font>
                     <Font name="Montserrat Bold" size="24.0" />
                 </font>
@@ -41,14 +43,13 @@
         <effect>
             <DropShadow blurType="ONE_PASS_BOX" offsetY="1.0" />
         </effect>
-        <JFXButton fx:id="editButton" buttonType="RAISED" layoutX="324.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="EDITAR" />
+        <JFXButton fx:id="editButton" onAction="#openEditShoppingListWindow" buttonType="RAISED" layoutX="324.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="EDITAR" />
         <JFXButton fx:id="deleteButton" onAction="#deleteBuyList" buttonType="RAISED" layoutX="432.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="ELIMINAR" />
-    </AnchorPane>
-    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" onAction="#openAddBuyListWindow" styleClass="main-button" stylesheets="@../main/main.css">
+   </AnchorPane>
+    <JFXButton fx:id="addButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="440.0" onAction="#openAddShoppingListWindow" styleClass="main-button" stylesheets="@../main/main.css">
         <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24" styleClass="main-icon" text="" />
         </graphic>
     </JFXButton>
 
 </AnchorPane>
-

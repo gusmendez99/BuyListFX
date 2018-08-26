@@ -1,6 +1,7 @@
 package manager;
 
-import buylist.ShoppingList;
+import shopping_item.ShoppingItem;
+import shopping_list.ShoppingList;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,9 @@ public class ShoppingListManager {
     }
 
     private void addDummyData(){
-        this.shoppingLists.add(new ShoppingList("ToDos", "Todos a realizar la otra semana"));
+        ShoppingList list1 = new ShoppingList("ToDos", "Todos a realizar la otra semana");
+        list1.addShoppingItem(new ShoppingItem("Manzanas", 2, 5.00));
+        this.shoppingLists.add(list1);
         this.shoppingLists.add(new ShoppingList("Amazon Wish List", "Todos a realizar la otra semana"));
     }
 
@@ -28,11 +31,23 @@ public class ShoppingListManager {
         return this.shoppingLists;
     }
 
-    public void addBuyList(ShoppingList shoppingList){
-        this.shoppingLists.add(shoppingList);
+    public ShoppingList getShoppingListByName(String name){
+        return this.shoppingLists.stream()             // convert list to stream
+                .filter(sl -> sl.getName().equals(name))
+                .findAny()
+                .orElse(null);
+
     }
 
-    public void deleteBuyList(ShoppingList shoppingList){
+    public boolean addShoppingList(String name, String description){
+        if(getShoppingListByName(name) == null) { //It seem the shopping list exists
+            this.shoppingLists.add(new ShoppingList(name, description));
+            return true;
+        }
+        return false;
+    }
+
+    public void deleteShoppingList(ShoppingList shoppingList){
         shoppingLists.removeIf(x -> x == shoppingList);
     }
 

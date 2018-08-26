@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../buylist/ShoppingListScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../shopping_list/ShoppingListScene.fxml"));
         //primaryStage.initStyle(StageStyle.UNDECORATED);
 
         JFXDecorator decorator = new JFXDecorator(primaryStage, root, false, false, false);

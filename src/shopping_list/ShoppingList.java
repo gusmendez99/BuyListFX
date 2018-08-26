@@ -1,11 +1,11 @@
-package buylist;
+package shopping_list;
 
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-import product.ShoppingItem;
+import shopping_item.ShoppingItem;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,10 +32,6 @@ public class ShoppingList extends RecursiveTreeObject<ShoppingList> {
         return this.name.get();
     }
 
-    public void setName(String name) {
-        this.name.set(name);
-    }
-
     public SimpleStringProperty nameProperty() {
         return name;
     }
@@ -44,36 +40,36 @@ public class ShoppingList extends RecursiveTreeObject<ShoppingList> {
         return description.get();
     }
 
-    public SimpleStringProperty descriptionProperty() {
-        return description;
-    }
-
     public SimpleObjectProperty dateProperty() {
         return date;
     }
 
     public SimpleIntegerProperty pendingProductsProperty(){
-        return new SimpleIntegerProperty(getPendingProducts().size());
+        return new SimpleIntegerProperty(getPendingShoppingItems().size());
     }
 
     public SimpleDoubleProperty estimatePendingProperty(){
         return new SimpleDoubleProperty(getEstimatePendingTotal());
     }
 
-    public List<ShoppingItem> getPendingProducts(){
+    public List<ShoppingItem> getPendingShoppingItems(){
         return this.shoppingItems.stream()             // convert list to stream
                 .filter(p -> !p.isComplete())     // we dont like not pendings
                 .collect(Collectors.toList());
     }
 
+    public List<ShoppingItem> getAllShoppingItems(){
+        return this.shoppingItems;
+    }
+
     public double getEstimatePendingTotal(){
         return this.shoppingItems.stream()             // convert list to stream
                 .filter(p -> !p.isComplete())
-                .mapToDouble(ShoppingItem::getPrice)
+                .mapToDouble( p -> p.getPrice() * p.getQuantity())
                 .sum();
     }
 
-    public void addProduct(ShoppingItem shoppingItem) {
+    public void addShoppingItem(ShoppingItem shoppingItem) {
         this.shoppingItems.add(shoppingItem);
     }
 
