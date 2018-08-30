@@ -40,15 +40,11 @@ public class ShoppingItem extends RecursiveTreeObject<ShoppingItem> {
         return isComplete;
     }
 
-    public String getName(){
-        return this.name.get();
-    }
-
     public int getQuantity(){
         return this.quantity.get();
     }
 
-    public Double getPrice(){
+    public double getPrice(){
         return this.price.get();
     }
 

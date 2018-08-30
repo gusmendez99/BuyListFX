@@ -68,7 +68,7 @@ public class ShoppingItemController {
 
     @FXML
     public void initialize() {
-
+        //Setting values of the columns
         setupCellValueFactory(nameColumn, ShoppingItem::nameProperty);
         setupCellValueFactory(quantityColumn, si -> si.quantityProperty().asObject());
         setupCellValueFactory(unitPriceColumn, si -> si.priceProperty().asObject());
@@ -77,6 +77,7 @@ public class ShoppingItemController {
             protected void updateItem(Double item, boolean empty) {
                 super.updateItem(item, empty);
                 if(!empty){
+                    // Setting Double as String with currency
                     DecimalFormat df = new DecimalFormat("#.00");
                     String valueStr = df.format(item);
                     setText(item == 0.00 ? "Q0.00" : "Q" + valueStr);
@@ -90,6 +91,7 @@ public class ShoppingItemController {
             protected void updateItem(Double item, boolean empty) {
                 super.updateItem(item, empty);
                 if(!empty){
+                    // Setting Double as String with currency
                     DecimalFormat df = new DecimalFormat("#.00");
                     String valueStr = df.format(item);
                     setText(item == 0.00 ? "Q0.00" : "Q" + valueStr);
@@ -101,7 +103,8 @@ public class ShoppingItemController {
         stateColumn.setCellFactory(tc -> new JFXTreeTableCell<ShoppingItem, Boolean>(){
             @Override
             protected void updateItem(Boolean item, boolean empty) {
-                super.updateItem(item, empty) ;
+                super.updateItem(item, empty);
+                // Setting Boolean as String
                 setText(empty ? null : item ? "Comprado" : "Pendiente" );
             }
         });
@@ -109,11 +112,13 @@ public class ShoppingItemController {
 
     public void setInitUI(String listName){
         this.currentShoppingListName = listName;
+        //Get list from the Shopping Manager for shows shopping items of a specific list
         ShoppingList currentShoppingList = ShoppingListManager.getInstance().getShoppingListByName(listName);
 
         DecimalFormat df = new DecimalFormat("#.00");
         String grandTotal = df.format(currentShoppingList.getEstimatePendingTotal());
 
+        //
         this.listTitleLabel.setText(currentShoppingList.getName());
         this.listDescriptionLabel.setText(currentShoppingList.getDescription());
         this.grandTotalLabel.setText(currentShoppingList.getEstimatePendingTotal() == 0.00 ? "Q0.00" : "Q" + grandTotal);

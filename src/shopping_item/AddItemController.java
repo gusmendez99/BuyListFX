@@ -36,6 +36,7 @@ public class AddItemController {
     @FXML
     private Label toolbarTitle;
 
+    // Saves the instance of the name list
     private String currentShoppingListName;
 
     public void setInitUI(String nameList){
@@ -44,9 +45,7 @@ public class AddItemController {
     }
 
     public void addNewShoppingItem(ActionEvent event){
-
-
-        if(validateParams()){
+        if(validateParams()){ //Check if the fields are of the same type of the object
             String name = inputName.getText();
             double price = Double.valueOf(inputPrice.getText());
             int quantity = Integer.valueOf(inputQuantity.getText());
@@ -59,6 +58,7 @@ public class AddItemController {
         }
     }
 
+    //Checks for valid values
     private boolean validateParams() {
         try {
             Double.valueOf(inputPrice.getText());
@@ -72,7 +72,7 @@ public class AddItemController {
     public void backToMainWindow(ActionEvent event) {
         Parent root;
         try {
-            // Cargar la nueva ventana
+            // Load new window
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../shopping_item/ShoppingItemScene.fxml"));
             root = loader.load();
             Stage stage = new Stage();
@@ -84,12 +84,11 @@ public class AddItemController {
             scene.getStylesheets().add(ShoppingListController.class.getResource("../main/main.css").toExternalForm());
             stage.setScene(scene);
 
-            //Setting first
+            //Setting init UI items of the new window
             ShoppingItemController controller = loader.getController();
             controller.setInitUI(this.currentShoppingListName);
 
             stage.setResizable(false);
-            // Muestra la ventana
             stage.show();
             // Hide this current window (if this is what you want)
             ((Node) (event.getSource())).getScene().getWindow().hide();
